@@ -8,21 +8,27 @@
 </head>
 <body>
     <div>
-        <input type="text">
-        <button onclick="">Generate a pwd</button>
+        <input type="text" id="pwd">
+        <button id="button">Generate a pwd</button>
     </div>
     <div>
-        <input type="checkbox">
+        <input type="checkbox" id="lowLet">
         <label for="">Lower letters</label>
-        <input type="checkbox">
+        <input type="checkbox" id="upLet">
         <label for="">Upper letters</label>
-        <input type="checkbox">
+        <input type="checkbox" id="speChar">
         <label for="">Special characters</label>
-        <input type="checkbox">
+        <input type="checkbox" id="nb">
         <label for="">Numbers</label>
         <label for="pwd-size">Choose a size for the pwd:</label>
-        <select name="pwdsize">
+        <select name="pwdsize" id="size">
         <option value="">--Please choose an option--</option>
-
+        <script>
+        for(let i=12; i<21; i++) {
+            document.write("<option value='" + i + "'>" + i + "</option>")
+        }
+        </script>
+        </select>
+<script src="script.js"></script>
 </body>
 </html>
