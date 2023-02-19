@@ -5,30 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
+    <style>
+        body {
+            font-family: cursive ;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <input type="text" id="pwd">
-        <button id="button">Generate a pwd</button>
-    </div>
-    <div>
-        <input type="checkbox" id="lowLet">
-        <label for="">Lower letters</label>
-        <input type="checkbox" id="upLet">
-        <label for="">Upper letters</label>
-        <input type="checkbox" id="speChar">
-        <label for="">Special characters</label>
-        <input type="checkbox" id="nb">
-        <label for="">Numbers</label>
-        <label for="pwd-size">Choose a size for the pwd:</label>
+    
+    <h3>PASSWORD GENERATOR</h3>
+    <p>The CNIL is a French independent administrative authority whose mission is to protect privacy and personal data. It is responsible for ensuring compliance with legislation on personal data, informing and raising awareness among citizens about their rights and responsibilities regarding personal data, and imposing sanctions on companies and organizations that do not comply with the law.</p>
+    <p>According to the CNIL, a secure password must contain at least twelve characters including at least:</p>
+    <ul>
+        <li>One number</li>
+        <li>One uppercase letter</li>
+        <li>One punctuation mark or special character (dollar sign, hash, etc.)</li>
+    </ul>
+    <p><label for="pwd-size">Password length :</label>
         <select name="pwdsize" id="size">
-        <option value="">--Please choose an option--</option>
+        <option value="">--Choose an option--</option>
         <script>
-        for(let i=12; i<21; i++) {
+        for(let i=12; i<31; i++) {
             document.write("<option value='" + i + "'>" + i + "</option>")
         }
         </script>
         </select>
-<script src="script.js"></script>
+    </p>
+    <p> <input type="checkbox" id="lowLet">
+        <label for="">Lower letters</label>
+
+        <input type="checkbox" id="upLet">
+        <label for="">Upper letters</label>
+    </p>
+    <p> <input type="checkbox" id="speChar">
+        <label for="">Special characters</label>
+
+        <input type="checkbox" id="nb">
+        <label for="">Numbers</label>
+    </p>
+    <input type="text" id="pwd" size="40">
+    <button id="button">Generate a password</button>
+    <button id="copyButton">Copy</button>
+    <span id="textCopied"></span>
+    <p id="pwd-strength"></p>
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>    
+    <script src="script.js"></script>
 </body>
 </html>
